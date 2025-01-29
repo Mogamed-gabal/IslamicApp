@@ -1,41 +1,37 @@
 <div class="quran-read">
-    <h2 class="text-center text-primary">Read Quran</h2>
-    <p class="text-center text-secondary">Select a Surah to start reading.</p>
-  
-    <!-- Surah Selection Dropdown -->
-    <div class="container text-center">
+  <h2 class="text-center text-primary">Read Quran</h2>
+  <p class="text-center text-secondary">Select a Surah to start reading.</p>
+
+  <!-- Surah Selection Dropdown -->
+  <div class="container text-center">
       <select class="form-select w-50 mx-auto mb-4" (change)="onSurahSelect($event)">
-        <option value="" disabled selected>Select a Surah</option>
-        @for (surah of surahs; track $index) {
-            <option [value]="surah.number">{{ surah.englishName }} ({{ surah.name }})</option>
-        }
-        
+          <option value="" disabled selected>Select a Surah</option>
+          @for (surah of surahs; track $index) {
+          <option [value]="surah.number">{{ surah.englishName }} ({{ surah.name }})</option>
+          }
       </select>
-    </div>
-  
-    <!-- Display Surah Details -->
-     @if (selectedSurah) {
-        <div class="surah-details container">
-            <h3 class="text-center text-primary">{{ selectedSurah[0].englishName }} ({{ selectedSurah[0].name }})</h3>
-            <p class="text-center text-secondary">{{ selectedSurah[0].englishNameTranslation }} - {{ selectedSurah[0].revelationType }}</p>
-            <div class="ayahs">
-                @for (ayah of selectedSurah[0].ayahs; track $index) {
-                    <div class="ayah">
-                        <p class="arabic-text">{{ ayah.text }}</p>
-                        <p class="translation-text">{{ selectedSurah[1].ayahs[ayah.numberInSurah - 1].text }}</p>
-                      </div>
-                }
-              
-            </div>
-          </div>
-     }
-   
-  
-    <!-- Loading State -->
-     @if (isLoading) {
-        <div class="text-center">
-            <p>Loading Surahs...</p>
-          </div>
-     }
-    
   </div>
+
+  <!-- Display Surah Details -->
+  @if (selectedSurah) {
+  <div class="surah-details container">
+      <h3 class="text-center text-primary">{{ selectedSurah[0].englishName }} ({{ selectedSurah[0].name }})</h3>
+      <p class="text-center text-secondary">{{ selectedSurah[0].englishNameTranslation }} - {{ selectedSurah[0].revelationType }}</p>
+      <div class="ayahs">
+          @for (ayah of selectedSurah[0].ayahs; track $index) {
+          <div class="ayah">
+              <p class="arabic-text">{{ ayah.text }}</p>
+              <p class="translation-text">{{ selectedSurah[1].ayahs[ayah.numberInSurah - 1].text }}</p>
+          </div>
+          }
+      </div>
+  </div>
+  }
+
+  <!-- Loading State -->
+  @if (isLoading) {
+  <div class="text-center">
+      <p>Loading Surahs...</p>
+  </div>
+  }
+</div>

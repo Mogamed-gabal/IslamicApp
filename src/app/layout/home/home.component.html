@@ -1,393 +1,391 @@
-<div class="landing-page ">
-  <!-- Navbar -->
-  @if (isEnglish) {
+<div class="landing-page">
+    <!-- Navbar -->
+    @if (isEnglish) {
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container">
-          <a class="navbar-brand" href="#" (click)="scrollTo('home')">
-              <i class="pi pi-book"></i> Alhosary Islamic PlatForm
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ml-auto">
-                  <li class="nav-item" [ngClass]="{'active': activeSection === 'home'}">
-                      <a class="nav-link" (click)="scrollTo('home')">Home</a>
-                  </li>
-                  <li class="nav-item" [ngClass]="{'active': activeSection === 'features'}">
-                      <a class="nav-link" (click)="scrollTo('features')">Features</a>
-                  </li>
-                  <li class="nav-item" [ngClass]="{'active': activeSection === 'about'}">
-                      <a class="nav-link" (click)="scrollTo('about')">About</a>
-                  </li>
-                  <li class="nav-item" [ngClass]="{'active': activeSection === 'quran'}">
-                      <a class="nav-link" (click)="scrollTo('quran')">Quran</a>
-                  </li>
-                  <li class="nav-item" [ngClass]="{'active': activeSection === 'prayer-times'}">
-                      <a class="nav-link" (click)="scrollTo('prayer-times')">Prayer Times</a>
-                  </li>
-                  <li class="nav-item" [ngClass]="{'active': activeSection === 'testimonials'}">
-                      <a class="nav-link" (click)="scrollTo('testimonials')">Testimonials</a>
-                  </li>
-              </ul>
-              <ul class="navbar-nav m-auto">
-                  <li><button class=" btn btn-success px-5 mx-1" (click)=" changeLangToAr()">اللغة العربية</button></li>
-                  <li><button class=" btn btn-danger px-5" (click)="changeLangEn()">اللغة الانجليوية</button></li>
-
-              </ul>
-          </div>
-      </div>
-  </nav>
-
-  }@if (!isEnglish) {
-    <nav class="navbar navbar-expand-lg bg-primary " style="direction: rtl;">
-        <div class="container-fluid">
-            <a class="navbar-brand nav-top" href="#" (click)="scrollTo('home')">
-                <i class="pi pi-book "></i> منصة الحصرى الاسلامية
-            </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item" [ngClass]="{'active': activeSection === 'home'}">
-                    <a class="nav-link" (click)="scrollTo('home')">المنزل</a>
-                </li>
-                <li class="nav-item" [ngClass]="{'active': activeSection === 'features'}">
-                    <a class="nav-link" (click)="scrollTo('features')">الخصائص</a>
-                </li>
-                <li class="nav-item" [ngClass]="{'active': activeSection === 'about'}">
-                    <a class="nav-link" (click)="scrollTo('about')">معلومات عن الموقع</a>
-                </li>
-                <li class="nav-item" [ngClass]="{'active': activeSection === 'quran'}">
-                    <a class="nav-link" (click)="scrollTo('quran')">القرءان</a>
-                </li>
-                <li class="nav-item" [ngClass]="{'active': activeSection === 'prayer-times'}">
-                    <a class="nav-link" (click)="scrollTo('prayer-times')">مواقيت الصلاة</a>
-                </li>
-                <li class="nav-item" [ngClass]="{'active': activeSection === 'testimonials'}">
-                    <a class="nav-link" (click)="scrollTo('testimonials')">اراء المستخدمين</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav m-auto">
-                <li><button class=" btn btn-primary px-5 mx-1" (click)=" changeLangToAr()">Ar</button></li>
-                <li><button class=" btn btn-danger px-5" (click)="changeLangEn()">En</button></li>
-
-            </ul>
-          </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#" (click)="scrollTo('home')"> <i class="pi pi-book"></i> Alhosary Islamic PlatForm </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" [ngClass]="{'active': activeSection === 'home'}">
+                        <a class="nav-link" (click)="scrollTo('home')">Home</a>
+                    </li>
+                    <li class="nav-item" [ngClass]="{'active': activeSection === 'features'}">
+                        <a class="nav-link" (click)="scrollTo('features')">Features</a>
+                    </li>
+                    <li class="nav-item" [ngClass]="{'active': activeSection === 'about'}">
+                        <a class="nav-link" (click)="scrollTo('about')">About</a>
+                    </li>
+                    <li class="nav-item" [ngClass]="{'active': activeSection === 'quran'}">
+                        <a class="nav-link" (click)="scrollTo('quran')">Quran</a>
+                    </li>
+                    <li class="nav-item" [ngClass]="{'active': activeSection === 'prayer-times'}">
+                        <a class="nav-link" (click)="scrollTo('prayer-times')">Prayer Times</a>
+                    </li>
+                    <li class="nav-item" [ngClass]="{'active': activeSection === 'testimonials'}">
+                        <a class="nav-link" (click)="scrollTo('testimonials')">Testimonials</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav m-auto">
+                    <li><button class="btn btn-success px-5 mx-1" (click)=" changeLangToAr()">اللغة العربية</button></li>
+                    <li><button class="btn btn-danger px-5" (click)="changeLangEn()">اللغة الانجليوية</button></li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
+
+    }@if (!isEnglish) {
+    <nav class="navbar navbar-expand-lg bg-primary" style="direction: rtl;">
+        <div class="container-fluid">
+            <a class="navbar-brand nav-top" href="#" (click)="scrollTo('home')"> <i class="pi pi-book"></i> منصة الحصرى الاسلامية </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" [ngClass]="{'active': activeSection === 'home'}">
+                        <a class="nav-link" (click)="scrollTo('home')">المنزل</a>
+                    </li>
+                    <li class="nav-item" [ngClass]="{'active': activeSection === 'features'}">
+                        <a class="nav-link" (click)="scrollTo('features')">الخصائص</a>
+                    </li>
+                    <li class="nav-item" [ngClass]="{'active': activeSection === 'about'}">
+                        <a class="nav-link" (click)="scrollTo('about')">معلومات عن الموقع</a>
+                    </li>
+                    <li class="nav-item" [ngClass]="{'active': activeSection === 'quran'}">
+                        <a class="nav-link" (click)="scrollTo('quran')">القرءان</a>
+                    </li>
+                    <li class="nav-item" [ngClass]="{'active': activeSection === 'prayer-times'}">
+                        <a class="nav-link" (click)="scrollTo('prayer-times')">مواقيت الصلاة</a>
+                    </li>
+                    <li class="nav-item" [ngClass]="{'active': activeSection === 'testimonials'}">
+                        <a class="nav-link" (click)="scrollTo('testimonials')">اراء المستخدمين</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav m-auto">
+                    <li><button class="btn btn-primary px-5 mx-1" (click)=" changeLangToAr()">Ar</button></li>
+                    <li><button class="btn btn-danger px-5" (click)="changeLangEn()">En</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     }
-  <!-- Hero Section -->
-  <section class="hero-section text-center py-5">
-      @if (isEnglish) {
-      <div class="container">
-          <h1 class="display-4 text-primary">Welcome to the Alhosary Islamic PlatForm</h1>
-          <p class="lead text-secondary">Your ultimate guide to Islamic knowledge, prayers, and more.</p>
-          <a href="#features" class="btn btn-lg btn-gold">Explore Features</a>
-      </div>
-      }@else if(!isEnglish)
-      {
-      <div class="container" style="direction: rtl;">
-          <h1 class="display-4 text-primary">اهلا بك فى منصة الحصرى الاسلامية</h1>
-          <p class="lead text-secondary">دليلك الشامل للمعرفة الإسلامية والصلاة والمزيد.</p>
-          <a href="#features" class="btn btn-lg btn-gold">تصفح الخدمات</a>
-      </div>
-      }
+    <!-- Hero Section -->
+    <section class="hero-section text-center py-5">
+        @if (isEnglish) {
+        <div class="container">
+            <h1 class="display-4 text-primary">Welcome to the Alhosary Islamic PlatForm</h1>
+            <p class="lead text-secondary">Your ultimate guide to Islamic knowledge, prayers, and more.</p>
+            <a href="#features" class="btn btn-lg btn-gold">Explore Features</a>
+        </div>
+        }@else if(!isEnglish) {
+        <div class="container" style="direction: rtl;">
+            <h1 class="display-4 text-primary">اهلا بك فى منصة الحصرى الاسلامية</h1>
+            <p class="lead text-secondary">دليلك الشامل للمعرفة الإسلامية والصلاة والمزيد.</p>
+            <a href="#features" class="btn btn-lg btn-gold">تصفح الخدمات</a>
+        </div>
+        }
+    </section>
 
+    <!-- Features Section -->
+    <section id="features" class="features-section py-5 bg-light">
+        @if(isEnglish){
 
-  </section>
+        <div class="container">
+            <h2 class="text-center text-primary mb-5">Features</h2>
+            <div class="row d-flex align-items-center">
+                <div class="col-md-3 text-center">
+                    <i class="fa-solid fa-book-quran" style="color: blue; font-size: 24px;"></i>
+                    <h3 class="text-primary">Quran</h3>
+                    <p class="text-secondary">Read and listen to the Quran with translations and tafsir.</p>
+                    <button routerLink="/quran" class="btn btn-primary">Go To Mushaf</button>
+                </div>
+                <div class="col-md-3 text-center py-2">
+                    <i class="fa-solid fa-person-praying features" style="color: blue; font-size: 24px;"></i>
+                    <h3 class="text-primary">Prayer Times</h3>
+                    <p class="text-secondary">Get accurate prayer times based on your location.</p>
+                    <a href="#prayer-times" class="btn btn-secondary">Visit Section</a>
+                </div>
+                <div class="col-md-3 text-center py-2">
+                    <i class="fa-solid fa-9" style="color: blue; font-size: 24px;"></i>
+                    <h3 class="text-primary">Asmma Allah Alhosna</h3>
+                    <p class="text-secondary">Read Muslim Azkar.</p>
+                    <button class="btn btn-danger" routerLink="/asmaa">Go To Page</button>
+                </div>
+                <div class="col-md-3 text-center py-2">
+                    <i class="fa-solid fa-star-and-crescent" style="color: blue; font-size: 24px;"></i>
+                    <h3 class="text-primary">Azkar</h3>
+                    <p class="text-secondary">Read Muslim Azkar.</p>
+                    <button class="btn btn-danger" routerLink="/Azkar">Go To Page</button>
+                </div>
+            </div>
+        </div>
 
-  <!-- Features Section -->
-  <section id="features" class="features-section py-5 bg-light ">
-      @if(isEnglish){
+        }@else if (!isEnglish) {
+        <div class="container" style="direction: rtl;">
+            <h2 class="text-center text-primary mb-5">اقسام الموقع</h2>
+            <div class="row d-flex align-items-center">
+                <div class="col-md-3 text-center">
+                    <i class="fa-solid fa-book-quran" style="color: blue; font-size: 24px;"></i>
+                    <h3 class="text-primary">القرءان</h3>
+                    <p class="text-secondary">إقرأ واستمع إلى القرآن الكريم مع الترجمة والتفسير.</p>
+                    <button routerLink="/quran" class="btn btn-primary">الذهاب للمصحف</button>
+                </div>
+                <div class="col-md-3 text-center py-2">
+                    <i class="fa-solid fa-person-praying features" style="color: blue; font-size: 24px;"></i>
+                    <h3 class="text-primary">مواقيت الصلاة</h3>
+                    <p class="text-secondary">احصل على أوقات الصلاة الدقيقة بناءً على موقعك.</p>
+                    <a href="#prayer-times" class="btn btn-secondary">الذهاب للصفحة</a>
+                </div>
+                <div class="col-md-3 text-center py-2">
+                    <i class="fa-solid fa-9" style="color: blue; font-size: 24px;"></i>
+                    <h3 class="text-primary">اسماء الله الحسنى</h3>
+                    <p class="text-secondary">الذهاب لرؤية اسماءالله الحسنى وفهم معانيها</p>
+                    <button class="btn btn-danger" routerLink="/asmaa">الذهاب للصفحة</button>
+                </div>
+                <div class="col-md-3 text-center py-2">
+                    <i class="fa-solid fa-star-and-crescent" style="color: blue; font-size: 24px;"></i>
+                    <h3 class="text-primary">الاذكار</h3>
+                    <p class="text-secondary">قراءة الاذكار والاحاديث.</p>
+                    <button class="btn btn-danger" routerLink="/Azkar">الذهاب للصفحة</button>
+                </div>
+            </div>
+        </div>
+        }
+    </section>
 
-      <div class="container">
-          <h2 class="text-center text-primary mb-5">Features</h2>
-          <div class="row d-flex align-items-center">
-              <div class="col-md-3 text-center">
-                  <i class="fa-solid fa-book-quran" style="color: blue;font-size: 24px;"></i>
-                  <h3 class="text-primary">Quran</h3>
-                  <p class="text-secondary">Read and listen to the Quran with translations and tafsir.</p>
-                  <button routerLink="/quran" class=" btn btn-primary "> Go To Mushaf</button>
-              </div>
-              <div class="col-md-3 text-center py-2">
-                  <i class="fa-solid fa-person-praying features " style="color: blue;font-size: 24px;"></i>
-                  <h3 class="text-primary">Prayer Times</h3>
-                  <p class="text-secondary">Get accurate prayer times based on your location.</p>
-                  <a href="#prayer-times" class=" btn btn-secondary ">Visit Section</a>
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        @if(isEnglish){
+        <div class="container">
+            <h2 class="text-center text-primary mb-5">About Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="../../../assets/app.jpg" alt="Islamic App" class="img-fluid rounded" />
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-primary">Our Mission</h3>
+                    <p class="text-secondary" style="font-size: 27px; font-weight: 200;">
+                        Welcome to [Alhosary Islamic PlatForm], a dedicated space for Muslims and those seeking to learn more about Islam. Our mission is to provide authentic, reliable, and accessible resources to help you deepen your
+                        understanding of Islam, strengthen your faith, and connect with a global community of believers.
+                    </p>
+                    <a href="#features" class="btn btn-gold">Learn More</a>
+                </div>
+            </div>
+        </div>
+        }@else if(!isEnglish){
+        <div class="container" style="direction: rtl;">
+            <h2 class="text-center text-primary mb-5">نبذة عن الموقع</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="../../../assets/app.jpg" alt="Islamic App" class="img-fluid rounded" />
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-primary">هدفنا</h3>
+                    <p class="text-secondary" style="font-size: 27px; font-weight: 200;">
+                        مرحبًا بك في [منصة الحصري الاسلامية ]، وهي مساحة مخصصة للمسلمين وأولئك الذين يسعون إلى معرفة المزيد عن الإسلام. تتمثل مهمتنا في توفير مصادر موثوقة وموثقة وسهلة الوصول لمساعدتك على تعميق فهمك للإسلام وتعزيز إيمانك
+                        والتواصل مع مجتمع عالمي من المؤمنين.
+                    </p>
+                    <a href="#features" class="btn btn-gold">معرفة المزيد</a>
+                </div>
+            </div>
+        </div>
+        }
+    </section>
 
-              </div>
-              <div class="col-md-3 text-center py-2">
-                  <i class="fa-solid fa-9" style="color: blue;font-size: 24px;"></i>
-                  <h3 class="text-primary">Asmma Allah Alhosna</h3>
-                  <p class="text-secondary">Read Muslim Azkar.</p>
-                  <button class=" btn btn-danger " routerLink="/asmaa"> Go To Page</button>
-              </div>
-              <div class="col-md-3 text-center py-2">
-                  <i class="fa-solid fa-star-and-crescent" style="color: blue;font-size: 24px;"></i>
-                  <h3 class="text-primary">Azkar</h3>
-                  <p class="text-secondary">Read Muslim Azkar.</p>
-                  <button class=" btn btn-danger " routerLink="/Azkar"> Go To Page</button>
-              </div>
-          </div>
-      </div>
+    <!-- Quran Section -->
+    <section id="quran" class="quran-section py-5 bg-light">
+        @if (isEnglish) {
+        <div class="container">
+            <h2 class="text-center text-primary mb-5">Quran</h2>
+            <div class="row">
+                <div class="col-md-6 my-5">
+                    <h3 class="text-primary">Read and Listen</h3>
+                    <p class="text-secondary viwe">
+                        The Quran is the eternal miracle and the divine guidance sent by Allah (SWT) to humanity. It is a source of light, wisdom, and mercy for all who seek the truth. At [Alhosary Islamic PlatForm], we aim to make the
+                        Quran accessible, understandable, and impactful for everyone.
+                    </p>
+                    <button class="btn btn-primary" routreLink="/quran">Visit Moshaf</button>
+                </div>
+                <div class="col-md-6">
+                    <img src="../../../assets/mushaf.jpg" alt="Quran" class="img-fluid rounded" />
+                </div>
+            </div>
+        </div>
+        }@else if (!isEnglish) {
+        <div class="container" style="direction: rtl;">
+            <h2 class="text-center text-primary mb-5">القرءان</h2>
+            <div class="row">
+                <div class="col-md-6 my-5">
+                    <h3 class="text-primary">اقرا واستمع</h3>
+                    <p class="text-secondary viwe">
+                        القرآن الكريم هو المعجزة الخالدة والهدى الإلهي الذي أرسله الله سبحانه وتعالى إلى البشرية، وهو مصدر نور وحكمة ورحمة لكل من يبحث عن الحقيقة. في [منصة الحصري الإسلامية]، نهدف إلى جعل القرآن الكريم في متناول الجميع
+                        ومفهومًا ومؤثرًا.
+                    </p>
+                    <button class="btn btn-primary" routerLink="/quran">الذهاب للمصحف</button>
+                </div>
+                <div class="col-md-6">
+                    <img src="../../../assets/mushaf.jpg" alt="Quran" class="img-fluid rounded" />
+                </div>
+            </div>
+        </div>
+        }
+    </section>
 
-      }@else if (!isEnglish) {
-      <div class="container" style="direction: rtl;">
-          <h2 class="text-center text-primary mb-5">اقسام الموقع</h2>
-          <div class="row d-flex align-items-center">
-              <div class="col-md-3 text-center">
-                  <i class="fa-solid fa-book-quran" style="color: blue;font-size: 24px;"></i>
-                  <h3 class="text-primary">القرءان</h3>
-                  <p class="text-secondary">إقرأ واستمع إلى القرآن الكريم مع الترجمة والتفسير.</p>
-                  <button routerLink="/quran" class=" btn btn-primary "> الذهاب للمصحف</button>
-              </div>
-              <div class="col-md-3 text-center py-2">
-                  <i class="fa-solid fa-person-praying features " style="color: blue;font-size: 24px;"></i>
-                  <h3 class="text-primary">مواقيت الصلاة</h3>
-                  <p class="text-secondary">احصل على أوقات الصلاة الدقيقة بناءً على موقعك.</p>
-                  <a href="#prayer-times" class=" btn btn-secondary ">الذهاب للصفحة</a>
+    <!-- Prayer Times Section -->
+    <section id="prayer-times" class="prayer-times-section py-5">
+        @if (isEnglish) {
+        <div class="container">
+            <h2 class="text-center text-primary mb-5">Prayer Times</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="../../../assets/prayer.jpg" alt="Prayer Times" class="img-fluid rounded" />
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-primary">Prayer Times for {{ location }}</h3>
+                    <div *ngIf="prayerTimes; else loading">
+                        <ul class="list-group">
+                            <li class="list-group-item">Fajr: {{ prayerTimes.Fajr }}</li>
+                            <li class="list-group-item">Dhuhr: {{ prayerTimes.Dhuhr }}</li>
+                            <li class="list-group-item">Asr: {{ prayerTimes.Asr }}</li>
+                            <li class="list-group-item">Maghrib: {{ prayerTimes.Maghrib }}</li>
+                            <li class="list-group-item">Isha: {{ prayerTimes.Isha }}</li>
+                        </ul>
+                    </div>
+                    <ng-template #loading>
+                        <p class="text-secondary">Loading prayer times...</p>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+        }@else if (!isEnglish) {
+        <div class="container" style="direction: rtl;">
+            <h2 class="text-center text-primary mb-5">مواقيت الصلاة</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="../../../assets/prayer.jpg" alt="Prayer Times" class="img-fluid rounded" />
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-primary">مواقيت الصلاة ل {{ location }}</h3>
+                    <div *ngIf="prayerTimes; else loading">
+                        <ul class="list-group">
+                            <li class="list-group-item">الفجر: {{ prayerTimes.Fajr }}</li>
+                            <li class="list-group-item">الظهر: {{ prayerTimes.Dhuhr }}</li>
+                            <li class="list-group-item">العصر: {{ prayerTimes.Asr }}</li>
+                            <li class="list-group-item">المغرب: {{ prayerTimes.Maghrib }}</li>
+                            <li class="list-group-item">العشاء: {{ prayerTimes.Isha }}</li>
+                        </ul>
+                    </div>
+                    <ng-template #loading>
+                        <p class="text-secondary">تحميل مواعيد الصلاة</p>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+        }
+    </section>
+    <!-- Qibla Section -->
 
-              </div>
-              <div class="col-md-3 text-center py-2">
-                  <i class="fa-solid fa-9" style="color: blue;font-size: 24px;"></i>
-                  <h3 class="text-primary">اسماء الله الحسنى</h3>
-                  <p class="text-secondary">الذهاب لرؤية اسماءالله الحسنى وفهم معانيها</p>
-                  <button class=" btn btn-danger " routerLink="/asmaa"> الذهاب للصفحة</button>
-              </div>
-              <div class="col-md-3 text-center py-2">
-                  <i class="fa-solid fa-star-and-crescent" style="color: blue;font-size: 24px;"></i>
-                  <h3 class="text-primary">الاذكار</h3>
-                  <p class="text-secondary">قراءة الاذكار والاحاديث.</p>
-                  <button class=" btn btn-danger " routerLink="/Azkar"> الذهاب للصفحة</button>
-              </div>
-          </div>
-      </div>
-      }
+    <section id="qibla" class="qibla-section py-5 bg-light">
+        @if (isEnglish) {
+        <div class="container">
+            <h2 class="text-center text-primary mb-5">Qibla Direction</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src=".././../../assets/quibla.jpg" alt="Qibla Direction" class="img-fluid rounded" />
+                </div>
+                <div class="col-md-6 text-center">
+                    <h3 class="text-primary">Find the Qibla Direction</h3>
+                    <div *ngIf="qiblaDirection !== null; else loading">
+                        <p class="text-secondary">Point your device toward the Qibla:</p>
+                        <div class="compass">
+                            <div class="compass-arrow" [style.transform]="'rotate(' + (currentHeading - qiblaDirection) + 'deg)'"></div>
+                        </div>
+                        <p class="text-secondary mt-3">Qibla Direction: {{ qiblaDirection }}°</p>
+                    </div>
+                    <ng-template #loading>
+                        <p class="text-secondary">Loading Qibla direction...</p>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+        }@else if (!isEnglish) {
+        <div class="container" style="direction: rtl;">
+            <h2 class="text-center text-primary mb-5">اتجاه القبلة</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src=".././../../assets/quibla.jpg" alt="Qibla Direction" class="img-fluid rounded" />
+                </div>
+                <div class="col-md-6 text-center">
+                    <h3 class="text-primary">اوجد اتجاه القبلة</h3>
+                    <div *ngIf="qiblaDirection !== null; else loading">
+                        <p class="text-secondary">وجه الهاتف ل اتجاه القبلة:</p>
+                        <div class="compass">
+                            <div class="compass-arrow" [style.transform]="'rotate(' + (currentHeading - qiblaDirection) + 'deg)'"></div>
+                        </div>
+                        <p class="text-secondary mt-3">اتجاه القبلة: {{ qiblaDirection }}°</p>
+                    </div>
+                    <ng-template #loading>
+                        <p class="text-secondary">تحميل اتجاه القبلة..</p>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+        }
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section py-5 bg-light">
+        @if (isEnglish) {
+        <div class="container">
+            <h2 class="text-center text-primary mb-5">What Our Users Say</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <p class="text-secondary">"This app has been a blessing for my daily prayers and Quran recitation."</p>
+                    <p class="text-gold">- Ahmed</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="text-secondary">"The prayer times are always accurate, and the Qibla finder is very helpful."</p>
+                    <p class="text-gold">- Fatima</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="text-secondary">"I love the clean design and easy-to-use interface."</p>
+                    <p class="text-gold">- Yusuf</p>
+                </div>
+            </div>
+        </div>
+        }@else if (!isEnglish) {
+        <div class="container" style="direction: rtl;">
+            <h2 class="text-center text-primary mb-5">اراء مستخدى الموقع</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <p class="text-secondary">"لقد كان هذا التطبيق نعمة لصلواتي اليومية وتلاوة القرآن الكريم."</p>
+                    <p class="text-gold">- احمد</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="text-secondary">"أوقات الصلاة دائما دقيقة، ومحدد القبلة مفيد جدا."</p>
+                    <p class="text-gold">- فاطمة</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="text-secondary">"أحب التصميم النظيف والواجهة سهلة الاستخدام."</p>
+                    <p class="text-gold">- يوسف</p>
+                </div>
+            </div>
+        </div>
+        }
+    </section>
 
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about-section py-5">
-      @if(isEnglish){
-      <div class="container">
-          <h2 class="text-center text-primary mb-5">About Us</h2>
-          <div class="row">
-              <div class="col-md-6">
-                  <img src="../../../assets/app.jpg" alt="Islamic App" class="img-fluid rounded">
-              </div>
-              <div class="col-md-6">
-                  <h3 class="text-primary">Our Mission</h3>
-                  <p class="text-secondary"style="font-size: 27px;font-weight: 200;">Welcome to [Alhosary Islamic PlatForm], a dedicated space for Muslims and those seeking to learn more about Islam. Our mission is to provide authentic, reliable, and accessible resources to help you deepen your understanding of Islam, strengthen your faith, and connect with a global community of believers.</p>
-                  <a href="#features" class="btn btn-gold">Learn More</a>
-              </div>
-          </div>
-      </div>
-      }@else if(!isEnglish){
-      <div class="container" style="direction: rtl;">
-          <h2 class="text-center text-primary mb-5">نبذة عن الموقع</h2>
-          <div class="row">
-              <div class="col-md-6">
-                  <img src="../../../assets/app.jpg" alt="Islamic App" class="img-fluid rounded">
-              </div>
-              <div class="col-md-6">
-                  <h3 class="text-primary">هدفنا</h3>
-                  <p class="text-secondary" style="font-size: 27px;font-weight: 200;"> مرحبًا بك في [منصة الحصري الاسلامية ]، وهي مساحة مخصصة للمسلمين وأولئك الذين يسعون إلى معرفة المزيد عن الإسلام. تتمثل مهمتنا في توفير مصادر موثوقة وموثقة وسهلة الوصول لمساعدتك على تعميق فهمك للإسلام وتعزيز إيمانك والتواصل مع مجتمع عالمي من المؤمنين.  </p>
-                  <a href="#features" class="btn btn-gold">معرفة المزيد</a>
-              </div>
-          </div>
-      </div>
-      }
-
-  </section>
-
-  <!-- Quran Section -->
-  <section id="quran" class="quran-section py-5 bg-light">
-      @if (isEnglish) { <div class="container">
-          <h2 class="text-center text-primary mb-5">Quran</h2>
-          <div class="row">
-              <div class="col-md-6 my-5">
-                  <h3 class="text-primary">Read and Listen</h3>
-                  <p class="text-secondary viwe">The Quran is the eternal miracle and the divine guidance sent by Allah (SWT) to humanity. It is a source of light, wisdom, and mercy for all who seek the truth. At [Alhosary Islamic PlatForm], we aim to make the Quran accessible, understandable, and impactful for everyone.</p>
-                  <button class=" btn btn-primary" routreLink="/quran">Visit Moshaf</button>
-              </div>
-              <div class="col-md-6">
-                  <img src="../../../assets/mushaf.jpg" alt="Quran" class="img-fluid rounded">
-              </div>
-          </div>
-      </div>}@else if (!isEnglish) {
-      <div class="container" style="direction: rtl;">
-          <h2 class="text-center text-primary mb-5">القرءان</h2>
-          <div class="row">
-              <div class="col-md-6 my-5">
-                  <h3 class="text-primary">اقرا واستمع</h3>
-                  <p class="text-secondary viwe">القرآن الكريم هو المعجزة الخالدة والهدى الإلهي الذي أرسله الله سبحانه وتعالى إلى البشرية، وهو مصدر نور وحكمة ورحمة لكل من يبحث عن الحقيقة. في [منصة الحصري الإسلامية]، نهدف إلى جعل القرآن الكريم في متناول الجميع ومفهومًا ومؤثرًا.</p>
-                  <button class=" btn btn-primary" routerLink="/quran">الذهاب للمصحف</button>
-              </div>
-              <div class="col-md-6">
-                  <img src="../../../assets/mushaf.jpg" alt="Quran" class="img-fluid rounded">
-              </div>
-          </div>
-      </div>
-      }
-
-  </section>
-
-  <!-- Prayer Times Section -->
-  <section id="prayer-times" class="prayer-times-section py-5">
-      @if (isEnglish) {
-      <div class="container">
-          <h2 class="text-center text-primary mb-5">Prayer Times</h2>
-          <div class="row">
-              <div class="col-md-6">
-                  <img src="../../../assets/prayer.jpg" alt="Prayer Times" class="img-fluid rounded">
-              </div>
-              <div class="col-md-6">
-                  <h3 class="text-primary">Prayer Times for {{ location }}</h3>
-                  <div *ngIf="prayerTimes; else loading">
-                      <ul class="list-group">
-                          <li class="list-group-item">Fajr: {{ prayerTimes.Fajr }}</li>
-                          <li class="list-group-item">Dhuhr: {{ prayerTimes.Dhuhr }}</li>
-                          <li class="list-group-item">Asr: {{ prayerTimes.Asr }}</li>
-                          <li class="list-group-item">Maghrib: {{ prayerTimes.Maghrib }}</li>
-                          <li class="list-group-item">Isha: {{ prayerTimes.Isha }}</li>
-                      </ul>
-                  </div>
-                  <ng-template #loading>
-                      <p class="text-secondary">Loading prayer times...</p>
-                  </ng-template>
-              </div>
-          </div>
-      </div>
-      }@else if (!isEnglish) {
-      <div class="container" style="direction: rtl ;">
-          <h2 class="text-center text-primary mb-5">مواقيت الصلاة</h2>
-          <div class="row">
-              <div class="col-md-6">
-                  <img src="../../../assets/prayer.jpg" alt="Prayer Times" class="img-fluid rounded">
-              </div>
-              <div class="col-md-6">
-                  <h3 class="text-primary">مواقيت الصلاة ل {{ location }}</h3>
-                  <div *ngIf="prayerTimes; else loading">
-                      <ul class="list-group">
-                          <li class="list-group-item">الفجر: {{ prayerTimes.Fajr }}</li>
-                          <li class="list-group-item">الظهر: {{ prayerTimes.Dhuhr }}</li>
-                          <li class="list-group-item">العصر: {{ prayerTimes.Asr }}</li>
-                          <li class="list-group-item">المغرب: {{ prayerTimes.Maghrib }}</li>
-                          <li class="list-group-item">العشاء: {{ prayerTimes.Isha }}</li>
-                      </ul>
-                  </div>
-                  <ng-template #loading>
-                      <p class="text-secondary">تحميل مواعيد الصلاة</p>
-                  </ng-template>
-              </div>
-          </div>
-      </div>
-      }
-
-  </section>
-  <!-- Qibla Section -->
-
-  <section id="qibla" class="qibla-section py-5 bg-light">
-      @if (isEnglish) {
-      <div class="container">
-          <h2 class="text-center text-primary mb-5">Qibla Direction</h2>
-          <div class="row">
-              <div class="col-md-6">
-                  <img src=".././../../assets/quibla.jpg" alt="Qibla Direction" class="img-fluid rounded">
-              </div>
-              <div class="col-md-6 text-center">
-                  <h3 class="text-primary">Find the Qibla Direction</h3>
-                  <div *ngIf="qiblaDirection !== null; else loading">
-                      <p class="text-secondary">Point your device toward the Qibla:</p>
-                      <div class="compass">
-                          <div class="compass-arrow" [style.transform]="'rotate(' + (currentHeading - qiblaDirection) + 'deg)'"></div>
-                      </div>
-                      <p class="text-secondary mt-3">Qibla Direction: {{ qiblaDirection }}°</p>
-                  </div>
-                  <ng-template #loading>
-                      <p class="text-secondary">Loading Qibla direction...</p>
-                  </ng-template>
-              </div>
-          </div>
-      </div>
-      }@else if (!isEnglish) {
-      <div class="container" style="direction: rtl;">
-          <h2 class="text-center text-primary mb-5">اتجاه القبلة</h2>
-          <div class="row">
-              <div class="col-md-6">
-                  <img src=".././../../assets/quibla.jpg" alt="Qibla Direction" class="img-fluid rounded">
-              </div>
-              <div class="col-md-6 text-center">
-                  <h3 class="text-primary">اوجد اتجاه القبلة</h3>
-                  <div *ngIf="qiblaDirection !== null; else loading">
-                      <p class="text-secondary">وجه الهاتف ل اتجاه القبلة:</p>
-                      <div class="compass">
-                          <div class="compass-arrow" [style.transform]="'rotate(' + (currentHeading - qiblaDirection) + 'deg)'"></div>
-                      </div>
-                      <p class="text-secondary mt-3">اتجاه القبلة: {{ qiblaDirection }}°</p>
-                  </div>
-                  <ng-template #loading>
-                      <p class="text-secondary">تحميل اتجاه القبلة..</p>
-                  </ng-template>
-              </div>
-          </div>
-      </div>
-      }
-
-  </section>
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="testimonials-section py-5 bg-light">
-      @if (isEnglish) {
-      <div class="container">
-          <h2 class="text-center text-primary mb-5">What Our Users Say</h2>
-          <div class="row">
-              <div class="col-md-4 text-center">
-                  <p class="text-secondary">"This app has been a blessing for my daily prayers and Quran recitation."</p>
-                  <p class="text-gold">- Ahmed</p>
-              </div>
-              <div class="col-md-4 text-center">
-                  <p class="text-secondary">"The prayer times are always accurate, and the Qibla finder is very helpful."</p>
-                  <p class="text-gold">- Fatima</p>
-              </div>
-              <div class="col-md-4 text-center">
-                  <p class="text-secondary">"I love the clean design and easy-to-use interface."</p>
-                  <p class="text-gold">- Yusuf</p>
-              </div>
-          </div>
-      </div>
-      }@else if (!isEnglish) {
-      <div class="container" style="direction: rtl;">
-          <h2 class="text-center text-primary mb-5">اراء مستخدى الموقع</h2>
-          <div class="row">
-              <div class="col-md-4 text-center">
-                  <p class="text-secondary">"لقد كان هذا التطبيق نعمة لصلواتي اليومية وتلاوة القرآن الكريم."</p>
-                  <p class="text-gold">- احمد</p>
-              </div>
-              <div class="col-md-4 text-center">
-                  <p class="text-secondary">"أوقات الصلاة دائما دقيقة، ومحدد القبلة مفيد جدا."</p>
-                  <p class="text-gold">- فاطمة</p>
-              </div>
-              <div class="col-md-4 text-center">
-                  <p class="text-secondary">"أحب التصميم النظيف والواجهة سهلة الاستخدام."</p>
-                  <p class="text-gold">- يوسف</p>
-              </div>
-          </div>
-      </div>
-      }
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer bg-primary text-white text-center py-3">
-      <div class="container">
-          <p>&copy; 2025 Alhosary-Islamic-App. All rights reserved.</p>
-      </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer bg-primary text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2025 Alhosary-Islamic-App. All rights reserved.</p>
+        </div>
+    </footer>
 </div>
 @if (isShowing) {
 <div class="start position-fixed top-0 bottom-0 start-0 end-0 w-100 vh-100 d-flex align-items-center justify-content-center bg-light opacity-75">
-  <h2>هذا الموقع صدقة جارية على روح المرحوم الحاج عبدالوهاب محمد ابراهيم الحصرى والمغفور لها زوجته</h2>
+    <h2>هذا الموقع صدقة جارية على روح المرحوم الحاج عبدالوهاب محمد ابراهيم الحصرى والمغفور لها زوجته</h2>
 </div>
 }

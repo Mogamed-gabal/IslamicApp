@@ -1,31 +1,32 @@
+
 /* Quran Read Styles */
 .quran-read {
-    font-family: 'Arial', sans-serif;
-    padding: 20px;
-  }
-  
-  .surah-details {
-    margin-top: 20px;
-  }
-  
-  .ayahs {
-    margin-top: 20px;
-  }
-  
-  .ayah {
-    margin-bottom: 20px;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .arabic-text {
-    font-size: 1.5rem;
-    text-align: right;
-    color: var(--primary-color);
-  }
-  
-  .translation-text {
-    font-size: 1rem;
-    color: var(--text-color);
-    margin-top: 10px;
-  }
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+}
+
+.surah-details {
+  margin-top: 20px;
+}
+
+.ayahs {
+  margin-top: 20px;
+}
+
+.ayah {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.arabic-text {
+  font-size: 1.5rem;
+  text-align: right;
+  color: var(--primary-color);
+}
+
+.translation-text {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-top: 10px;
+}

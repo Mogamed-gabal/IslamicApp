@@ -1,42 +1,23 @@
 <div class="container mt-4">
   <h2 class="text-center mb-4">أسماء الله الحسنى</h2>
-  <!-- <div class="row">@for (name of names; track $index) {
-    <div class="col-md-4 mb-3" >
-      <p-card [header]="name.name" class="text-center">
-        <p class="mb-2">{{ name.transliteration }}</p>
-        <p class="text-muted">{{ name.en.meaning }}</p>
-        <p class="text-muted">{{ name.number }}</p>
-      </p-card>
-    </div>
-    
-  }
-   
-  </div> -->
-<div class="data">
-  <p-table
-    [value]="names"
-    [paginator]="true"
-    [rows]="9"
-    [tableStyle]="{ 'min-width': '50rem' }"
-    [rowsPerPageOptions]="[9, 18, 27]"
->
-    <ng-template #header>
-        <tr>
-            <th style="width:25%">Name</th>
-            <th style="width:25%">EnglishName</th>
-            <th style="width:25%">Number</th>
-            <th style="width:25%">meaning</th>
-        </tr>
-    </ng-template>
-    <ng-template #body let-name>
-        <tr>
-            <td>{{name.name }}</td>
-            <td>{{name.transliteration }}</td>
-            <td>{{name.number }}</td>
-            <td>{{name.en.meaning}}</td>
-        </tr>
-    </ng-template>
-</p-table>
-</div>
-
+  <div class="data">
+      <p-table [value]="names" [paginator]="true" [rows]="9" [tableStyle]="{ 'min-width': '50rem' }" [rowsPerPageOptions]="[9, 18, 27]">
+          <ng-template #header>
+              <tr>
+                  <th style="width: 25%;">Name</th>
+                  <th style="width: 25%;">EnglishName</th>
+                  <th style="width: 25%;">Number</th>
+                  <th style="width: 25%;">meaning</th>
+              </tr>
+          </ng-template>
+          <ng-template #body let-name>
+              <tr>
+                  <td>{{name.name }}</td>
+                  <td>{{name.transliteration }}</td>
+                  <td>{{name.number }}</td>
+                  <td>{{name.en.meaning}}</td>
+              </tr>
+          </ng-template>
+      </p-table>
+  </div>
 </div>
