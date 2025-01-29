@@ -4,6 +4,7 @@ import { CardModule } from 'primeng/card';
 import { AzkarService } from '../../services/Aamaa.service';
 import { PaginatorModule, PaginatorState } from 'primeng/paginator';
 import { TableModule } from 'primeng/table';
+
 @Component({
   selector: 'app-asmaa',
   imports:[CardModule,PaginatorModule,TableModule],

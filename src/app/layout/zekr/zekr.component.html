@@ -1,6 +1,27 @@
+<p-carousel [value]="AvilablesBooks" [numVisible]="3" [numScroll]="3" [circular]="false" >
+    <ng-template let-Emama #item>
+        <div class="border border-surface rounded-border m-2 p-4">
+            <div class="mb-4">
+
+            </div>
+            <div class="mb-4 font-medium"><span class="px2 fw-bold">Name</span>:{{ Emama.id }}</div>
+            <div class="flex justify-between items-center">
+                <div class="mt-0 font-semibold text-xl"><span class="px2 fw-bold">EnglishName</span>:{{Emama.name}}</div>
+                <div class="mt-0 font-semibold text-xl py-1"><span class="px2 fw-bold">AhadithNumber</span>:{{Emama.available}}</div>
+                <span class=" pt-5">
+                    <p-button (onClick)="getEmamAhadith(Emama.id)" label="ShowAhadith" icon="pi pi-heart" severity="secondary" [outlined]="true" />
+                    <p-button label="300Hadith" icon="pi pi-shopping-cart" styleClass="ml-2" />
+                </span>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>
+
+
+
 <div class="container py-4  ">
     <div class="heading w-100 text-center p-3">
-        <h2 class=" text-primary border-bottom p-2">الاحاديث من صحيح البخارى</h2>
+        <h2 class=" text-primary border-bottom p-2">الاحاديث: </h2>
     </div>
     @for (Hadith of Azkar; track $index) {
         <div class="hadith">

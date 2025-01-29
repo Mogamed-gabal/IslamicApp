@@ -5,7 +5,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container">
           <a class="navbar-brand" href="#" (click)="scrollTo('home')">
-              <i class="pi pi-book"></i> Islamic App
+              <i class="pi pi-book"></i> Alhosary Islamic PlatForm
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -41,10 +41,10 @@
   </nav>
 
   }@if (!isEnglish) {
-    <nav class="navbar navbar-expand-lg bg-primary" style="direction: rtl;">
+    <nav class="navbar navbar-expand-lg bg-primary " style="direction: rtl;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#" (click)="scrollTo('home')">
-                <i class="pi pi-book"></i> الموقع الاسلامى
+            <a class="navbar-brand nav-top" href="#" (click)="scrollTo('home')">
+                <i class="pi pi-book "></i> منصة الحصرى الاسلامية
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -83,14 +83,14 @@
   <section class="hero-section text-center py-5">
       @if (isEnglish) {
       <div class="container">
-          <h1 class="display-4 text-primary">Welcome to the Islamic App</h1>
+          <h1 class="display-4 text-primary">Welcome to the Alhosary Islamic PlatForm</h1>
           <p class="lead text-secondary">Your ultimate guide to Islamic knowledge, prayers, and more.</p>
           <a href="#features" class="btn btn-lg btn-gold">Explore Features</a>
       </div>
       }@else if(!isEnglish)
       {
       <div class="container" style="direction: rtl;">
-          <h1 class="display-4 text-primary">اهلا بك فى الموقع الاسلامى</h1>
+          <h1 class="display-4 text-primary">اهلا بك فى منصة الحصرى الاسلامية</h1>
           <p class="lead text-secondary">دليلك الشامل للمعرفة الإسلامية والصلاة والمزيد.</p>
           <a href="#features" class="btn btn-lg btn-gold">تصفح الخدمات</a>
       </div>
@@ -180,7 +180,7 @@
               </div>
               <div class="col-md-6">
                   <h3 class="text-primary">Our Mission</h3>
-                  <p class="text-secondary">We aim to provide a comprehensive platform for Muslims to enhance their knowledge, practice their faith, and stay connected to their religion.</p>
+                  <p class="text-secondary"style="font-size: 27px;font-weight: 200;">Welcome to [Alhosary Islamic PlatForm], a dedicated space for Muslims and those seeking to learn more about Islam. Our mission is to provide authentic, reliable, and accessible resources to help you deepen your understanding of Islam, strengthen your faith, and connect with a global community of believers.</p>
                   <a href="#features" class="btn btn-gold">Learn More</a>
               </div>
           </div>
@@ -193,8 +193,8 @@
                   <img src="../../../assets/app.jpg" alt="Islamic App" class="img-fluid rounded">
               </div>
               <div class="col-md-6">
-                  <h3 class="text-primary">هدنا</h3>
-                  <p class="text-secondary">هدفنا هو توفير منصة شاملة للمسلمين لتعزيز معرفتهم وممارسة عقيدتهم والبقاء على اتصال بدينهم.</p>
+                  <h3 class="text-primary">هدفنا</h3>
+                  <p class="text-secondary" style="font-size: 27px;font-weight: 200;"> مرحبًا بك في [منصة الحصري الاسلامية ]، وهي مساحة مخصصة للمسلمين وأولئك الذين يسعون إلى معرفة المزيد عن الإسلام. تتمثل مهمتنا في توفير مصادر موثوقة وموثقة وسهلة الوصول لمساعدتك على تعميق فهمك للإسلام وتعزيز إيمانك والتواصل مع مجتمع عالمي من المؤمنين.  </p>
                   <a href="#features" class="btn btn-gold">معرفة المزيد</a>
               </div>
           </div>
@@ -210,8 +210,8 @@
           <div class="row">
               <div class="col-md-6 my-5">
                   <h3 class="text-primary">Read and Listen</h3>
-                  <p class="text-secondary">Access the Quran in multiple languages with audio recitations by renowned Qaris.</p>
-                  <button class=" btn btn-primary">Visit Moshaf</button>
+                  <p class="text-secondary viwe">The Quran is the eternal miracle and the divine guidance sent by Allah (SWT) to humanity. It is a source of light, wisdom, and mercy for all who seek the truth. At [Alhosary Islamic PlatForm], we aim to make the Quran accessible, understandable, and impactful for everyone.</p>
+                  <button class=" btn btn-primary" routreLink="/quran">Visit Moshaf</button>
               </div>
               <div class="col-md-6">
                   <img src="../../../assets/mushaf.jpg" alt="Quran" class="img-fluid rounded">
@@ -223,8 +223,8 @@
           <div class="row">
               <div class="col-md-6 my-5">
                   <h3 class="text-primary">اقرا واستمع</h3>
-                  <p class="text-secondary">يمكنك الوصول إلى القرآن الكريم بالعديد من اللغات مع التلاوات الصوتية من قبل القراء المشهورين.</p>
-                  <button class=" btn btn-primary">الذهاب للمصحف</button>
+                  <p class="text-secondary viwe">القرآن الكريم هو المعجزة الخالدة والهدى الإلهي الذي أرسله الله سبحانه وتعالى إلى البشرية، وهو مصدر نور وحكمة ورحمة لكل من يبحث عن الحقيقة. في [منصة الحصري الإسلامية]، نهدف إلى جعل القرآن الكريم في متناول الجميع ومفهومًا ومؤثرًا.</p>
+                  <button class=" btn btn-primary" routerLink="/quran">الذهاب للمصحف</button>
               </div>
               <div class="col-md-6">
                   <img src="../../../assets/mushaf.jpg" alt="Quran" class="img-fluid rounded">
@@ -382,12 +382,12 @@
   <!-- Footer -->
   <footer class="footer bg-primary text-white text-center py-3">
       <div class="container">
-          <p>&copy; 2023 Islamic App. All rights reserved.</p>
+          <p>&copy; 2025 Alhosary-Islamic-App. All rights reserved.</p>
       </div>
   </footer>
 </div>
 @if (isShowing) {
 <div class="start position-fixed top-0 bottom-0 start-0 end-0 w-100 vh-100 d-flex align-items-center justify-content-center bg-light opacity-75">
-  <h2>هذا الموقع صدقة جارية على روح مرحوم الحاج عبدالوهاب محمد ابراهيم الحصرى والمغفور لها زوجته</h2>
+  <h2>هذا الموقع صدقة جارية على روح المرحوم الحاج عبدالوهاب محمد ابراهيم الحصرى والمغفور لها زوجته</h2>
 </div>
 }

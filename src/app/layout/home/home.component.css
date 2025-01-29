@@ -17,6 +17,20 @@ a
   font-family: 'Arial', sans-serif;
   color: #333333;
 }
+.nav-top
+{
+  cursor: pointer;
+    font-size: 27px;
+    font-weight: 700;
+    color: blanchedalmond;
+  
+}
+.nav-item .nav-link
+{
+  color: white;
+  font-weight: 300;
+  font-size: 15px;
+}
 .nav-item.active .nav-link {
   color:#F5F5F5;
   font-weight: bold;
@@ -59,7 +73,19 @@ a
     padding: 11px;
 
 }
-
+.viwe
+{
+  font-size: 27px;
+  font-weight: 200;
+}
+/* hero secton */
+.hero-section
+{
+  background: url(../../../assets/bg2.jpg) ;
+  background-size: cover ;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 
 /* Section Padding */
 .hero-section, .features-section, .about-section, .quran-section, .prayer-times-section, .testimonials-section {

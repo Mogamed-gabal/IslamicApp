@@ -13,7 +13,10 @@ import { RouterLink } from '@angular/router';
 export class QuranComponent implements OnInit {
   isArabic:boolean=true
   constructor() {}
- 
+ changeLang()
+ {
+  this.isArabic=!this.isArabic
+ }
   ngOnInit(): void {
     
   }
