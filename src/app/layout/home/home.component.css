@@ -1,94 +1,98 @@
+
+
 /* Custom Colors */
 :root {
-    --primary-color: #2E8B57;
-    --secondary-color: #DAA520;
-    --background-color: #F5F5F5;
-    --text-color: #333333;
-    --accent-color: #FFFFFF;
-  }
-  a
-  {
-    cursor: pointer;
-  }
-  /* Global Styles */
-  .landing-page {
-    font-family: 'Arial', sans-serif;
-    color: #333333;
-  }
-  .nav-item.active .nav-link {
-    color:#F5F5F5;
-    font-weight: bold;
-  }
-  .bg-primary {
-    background-color: #2E8B57;
-  }
-  
-  .text-primary {
-    color: #2E8B57;
-  }
-  
-  .text-secondary {
-    color: var#DAA520;
-  }
-  
-  .text-gold {
-    color: var#DAA520;
-  }
-  
-  .bg-light {
-    background-color:#F5F5F5;
-  }
-  
-  .btn-gold {
-    background-color: #DAA520;
-    color: #FFFFFF;
-    border: none;
-  }
-  
-  .btn-gold:hover {
-    background-color: #B8860B;
-  }
-  .features i
-  {
-   
-      font-size: 30px;
-      color: blue;
-      font-weight: 900;
-      padding: 11px;
+  --primary-color: #2E8B57;
+  --secondary-color: #DAA520;
+  --background-color: #F5F5F5;
+  --text-color: #333333;
+  --accent-color: #FFFFFF;
+}
+a
+{
+  cursor: pointer;
+}
+/* Global Styles */
+.landing-page {
+  font-family: 'Arial', sans-serif;
+  color: #333333;
+}
+.nav-item.active .nav-link {
+  color:#F5F5F5;
+  font-weight: bold;
+}
+.bg-primary {
+  background-color: #2E8B57;
+}
 
-  }
+.text-primary {
+  color: #2E8B57;
+}
+
+.text-secondary {
+  color: var#DAA520;
+}
+
+.text-gold {
+  color: var#DAA520;
+}
+
+.bg-light {
+  background-color:#F5F5F5;
+}
+
+.btn-gold {
+  background-color: #DAA520;
+  color: #FFFFFF;
+  border: none;
+}
+
+.btn-gold:hover {
+  background-color: #B8860B;
+}
+.features i
+{
  
-  
-  /* Section Padding */
-  .hero-section, .features-section, .about-section, .quran-section, .prayer-times-section, .testimonials-section {
-    padding: 100px 0;
-  }
-  
-  /* Footer */
-  .footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-  /* Qibla Compass Styles */
+    font-size: 30px;
+    color: blue;
+    font-weight: 900;
+    padding: 11px;
+
+}
+
+
+/* Section Padding */
+.hero-section, .features-section, .about-section, .quran-section, .prayer-times-section, .testimonials-section {
+  padding: 100px 0;
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+/* Qibla Compass Styles */
 .compass {
-    width: 200px;
-    height: 200px;
-    border: 5px solid var(--primary-color);
-    border-radius: 50%;
-    position: relative;
-    margin: 20px auto;
-    background-color: var(--accent-color);
-  }
-  
-  .compass-arrow {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 100px solid var(--secondary-color);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform-origin: bottom center;
-  }
+  width: 200px;
+  height: 200px;
+  border: 5px solid var(--primary-color);
+  border-radius: 50%;
+  position: relative;
+  margin: 20px auto;
+  background-color: var(--accent-color);
+}
+
+.compass-arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 100px solid var(--secondary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform-origin: bottom center;
+      -ms-transform-origin: bottom center;
+          transform-origin: bottom center;
+}

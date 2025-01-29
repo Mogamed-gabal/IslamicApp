@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
+import { QuranService } from '../../services/quran.service';
 
 @Component({
   selector: 'app-read',
@@ -12,29 +13,23 @@ export class ReadComponent implements OnInit {
   surahs: any[] = []; // List of Surahs
   selectedSurah: any = null; // Selected Surah details
   isLoading: boolean = true; // Loading state
-  constructor(){}
+  constructor(private QuranService:QuranService){}
 
-  async fetchSurahs() {
-    try {
-      const response = await axios.get('https://api.alquran.cloud/v1/surah');
-      this.surahs = response.data.data;
-      this.isLoading = false;
-    } catch (error) {
-      console.error('Error fetching Surahs:', error);
-      this.isLoading = false;
-    }
+   fetchSurahs() {
+   this.QuranService.getAllQuranSurah().subscribe({
+    next:(res)=>{this.surahs=res.data}
+   })
   }
-  async fetchSurahDetails(surahNumber: number) {
-    try {
-      const response = await axios.get(`https://api.alquran.cloud/v1/surah/${surahNumber}/editions/quran-uthmani,en.asad`);
-      this.selectedSurah = response.data.data;
-    } catch (error) {
-      console.error('Error fetching Surah details:', error);
-    }
+
+  featchSurahDetails(surahnumber:number)
+  {
+    this.QuranService.getSurahDetail(surahnumber).subscribe({
+      next:(res)=>{this.selectedSurah = res.data;this.isLoading=false}
+    })
   }
   onSurahSelect(event: any) {
     const surahNumber = event.target.value;
-    this.fetchSurahDetails(surahNumber);
+    this.featchSurahDetails(surahNumber);
   }
   ngOnInit(): void {
     this.fetchSurahs();

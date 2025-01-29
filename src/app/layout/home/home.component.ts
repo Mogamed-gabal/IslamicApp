@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import Typed from 'typed.js';
+import { HomeService } from '../../services/home.service';
  
 
 
@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
 someStringProperty: any;
 qiblaDirection: number | null = null;
 currentHeading: number = 0;
-  constructor(private http:HttpClient){}
+  constructor(private HomeService:HomeService ){}
 
   fetchPrayerTimes() {
     if (navigator.geolocation) {
@@ -35,16 +35,14 @@ currentHeading: number = 0;
         const longitude = position.coords.longitude;
 
         // Fetch location name using reverse geocoding
-        this.http.get(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`)
-          .subscribe((locationData: any) => {
+        this.HomeService.getLocation(latitude,longitude).subscribe((locationData: any) => {
             this.location = locationData.city || locationData.locality || 'Your Location';
           });
 
         // Fetch prayer times
         const today = new Date();
         const dateString = `${today.getDate()}-${today.getMonth() + 1}-${today.getFullYear()}`;
-        this.http.get(`https://api.aladhan.com/v1/timings/${dateString}?latitude=${latitude}&longitude=${longitude}&method=2`)
-          .subscribe((data: any) => {
+        this.HomeService.getPrayerTime(dateString,latitude,longitude).subscribe((data: any) => {
             this.prayerTimes = data.data.timings;
           });
         });
@@ -59,8 +57,7 @@ currentHeading: number = 0;
           const longitude = position.coords.longitude;
   
           // Fetch Qibla direction
-          this.http.get(`https://api.aladhan.com/v1/qibla/${latitude}/${longitude}`)
-            .subscribe((data: any) => {
+          this.HomeService.getQueblaDirection(latitude,longitude).subscribe((data: any) => {
               this.qiblaDirection = data.data.direction;
             });
         });
@@ -116,7 +113,7 @@ currentHeading: number = 0;
     this.fetchQiblaDirection()
     setTimeout(() => {
       this.isShowing=false;
-    }, 4000);
+    }, 8000);
   
    
   }
