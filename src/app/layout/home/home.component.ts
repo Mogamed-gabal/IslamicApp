@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, VERSION } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import Typed from 'typed.js';
+ 
 
 
 @Component({
@@ -15,6 +16,7 @@ import Typed from 'typed.js';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
+  isEnglish:boolean=false
   activeSection: string = 'home'; // Default active section
   isShowing:boolean=true
   prayerTimes: any = null;
@@ -100,15 +102,21 @@ currentHeading: number = 0;
       }
     }
 
-    // typedjs
-    
+    changeLangToAr()
+    {
+      this.isEnglish=false
+    }
+    changeLangEn()
+    {
+      this.isEnglish=true
+    }
   ngOnInit(): void {
     this.detectActiveSection();
     this.fetchPrayerTimes(); 
     this.fetchQiblaDirection()
     setTimeout(() => {
       this.isShowing=false;
-    }, 1000);
+    }, 4000);
   
    
   }

@@ -48,11 +48,16 @@
   .btn-gold:hover {
     background-color: #B8860B;
   }
-  
-  .feature-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  .features i
+  {
+   
+      font-size: 30px;
+      color: blue;
+      font-weight: 900;
+      padding: 11px;
+
   }
+ 
   
   /* Section Padding */
   .hero-section, .features-section, .about-section, .quran-section, .prayer-times-section, .testimonials-section {

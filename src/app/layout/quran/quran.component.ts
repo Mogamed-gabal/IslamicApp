@@ -14,6 +14,7 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./quran.component.scss']
 })
 export class QuranComponent implements OnInit {
+  isArabic:boolean=true
   chapters: any[] = []; // List of Quran chapters
   selectedChapter: any; // Selected chapter
   mode: 'read' | 'listen' = 'read'; // Default mode
