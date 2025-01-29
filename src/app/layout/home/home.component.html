@@ -1,0 +1,196 @@
+<div class="landing-page ">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#" (click)="scrollTo('home')">
+        <i class="pi pi-book"></i> Islamic App
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" [ngClass]="{'active': activeSection === 'home'}">
+            <a class="nav-link" (click)="scrollTo('home')">Home</a>
+          </li>
+          <li class="nav-item" [ngClass]="{'active': activeSection === 'features'}">
+            <a class="nav-link" (click)="scrollTo('features')">Features</a>
+          </li>
+          <li class="nav-item" [ngClass]="{'active': activeSection === 'about'}">
+            <a class="nav-link" (click)="scrollTo('about')">About</a>
+          </li>
+          <li class="nav-item" [ngClass]="{'active': activeSection === 'quran'}">
+            <a class="nav-link" (click)="scrollTo('quran')">Quran</a>
+          </li>
+          <li class="nav-item" [ngClass]="{'active': activeSection === 'prayer-times'}">
+            <a class="nav-link" (click)="scrollTo('prayer-times')">Prayer Times</a>
+          </li>
+          <li class="nav-item" [ngClass]="{'active': activeSection === 'testimonials'}">
+            <a class="nav-link" (click)="scrollTo('testimonials')">Testimonials</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-center py-5">
+    <div class="container">
+      <h1 class="display-4 text-primary">Welcome to the Islamic App</h1>
+      <p class="lead text-secondary">Your ultimate guide to Islamic knowledge, prayers, and more.</p>
+      <a href="#features" class="btn btn-lg btn-gold">Explore Features</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features-section py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center text-primary mb-5">Features</h2>
+      <div class="row d-flex align-items-center">
+        <div class="col-md-3 text-center">
+          <i class="pi pi-book feature-icon text-gold"></i>
+          <h3 class="text-primary">Quran</h3>
+          <p class="text-secondary">Read and listen to the Quran with translations and tafsir.</p>
+          <button routerLink="/quran" class=" btn btn-primary "> Go To Mushaf</button>
+        </div>
+        <div class="col-md-3 text-center">
+          <i class="pi pi-calendar feature-icon text-gold"></i>
+          <h3 class="text-primary">Prayer Times</h3>
+          <p class="text-secondary">Get accurate prayer times based on your location.</p>
+          <a href="#prayer-times"  class=" btn btn-secondary ">Visit Section</a>
+          
+        </div>
+        <div class="col-md-3 text-center">
+          <i class="pi pi-compass feature-icon text-gold"></i>
+          <h3 class="text-primary">Asmma Allah Alhosna</h3>
+          <p class="text-secondary">Read Muslim Azkar.</p>
+          <button class=" btn btn-danger " routerLink="/asmaa"> Go To Page</button>
+        </div>
+        <div class="col-md-3 text-center">
+          <i class="pi pi-compass feature-icon text-gold"></i>
+          <h3 class="text-primary">Azkar</h3>
+          <p class="text-secondary">Read Muslim Azkar.</p>
+          <button class=" btn btn-danger " routerLink="/Azkar"> Go To Page</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section py-5">
+    <div class="container">
+      <h2 class="text-center text-primary mb-5">About Us</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="../../../assets/app.jpg" alt="Islamic App" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+          <h3 class="text-primary">Our Mission</h3>
+          <p class="text-secondary">We aim to provide a comprehensive platform for Muslims to enhance their knowledge, practice their faith, and stay connected to their religion.</p>
+          <a href="#features" class="btn btn-gold">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quran Section -->
+  <section id="quran" class="quran-section py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center text-primary mb-5">Quran</h2>
+      <div class="row">
+        <div class="col-md-6 my-5">
+          <h3 class="text-primary">Read and Listen</h3>
+          <p class="text-secondary">Access the Quran in multiple languages with audio recitations by renowned Qaris.</p>
+          <button class=" btn btn-primary">Visit Moshaf</button>
+        </div>
+        <div class="col-md-6">
+          <img src="../../../assets/mushaf.jpg" alt="Quran" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prayer Times Section -->
+  <section id="prayer-times" class="prayer-times-section py-5">
+    <div class="container">
+      <h2 class="text-center text-primary mb-5">Prayer Times</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="../../../assets/prayer.jpg" alt="Prayer Times" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+          <h3 class="text-primary">Prayer Times for {{ location }}</h3>
+          <div *ngIf="prayerTimes; else loading">
+            <ul class="list-group">
+              <li class="list-group-item">Fajr: {{ prayerTimes.Fajr }}</li>
+              <li class="list-group-item">Dhuhr: {{ prayerTimes.Dhuhr }}</li>
+              <li class="list-group-item">Asr: {{ prayerTimes.Asr }}</li>
+              <li class="list-group-item">Maghrib: {{ prayerTimes.Maghrib }}</li>
+              <li class="list-group-item">Isha: {{ prayerTimes.Isha }}</li>
+            </ul>
+          </div>
+          <ng-template #loading>
+            <p class="text-secondary">Loading prayer times...</p>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Qibla Section -->
+
+<section id="qibla" class="qibla-section py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center text-primary mb-5">Qibla Direction</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <img src=".././../../assets/quibla.jpg" alt="Qibla Direction" class="img-fluid rounded">
+      </div>
+      <div class="col-md-6 text-center">
+        <h3 class="text-primary">Find the Qibla Direction</h3>
+        <div *ngIf="qiblaDirection !== null; else loading">
+          <p class="text-secondary">Point your device toward the Qibla:</p>
+          <div class="compass">
+            <div class="compass-arrow" [style.transform]="'rotate(' + (currentHeading - qiblaDirection) + 'deg)'"></div>
+          </div>
+          <p class="text-secondary mt-3">Qibla Direction: {{ qiblaDirection }}°</p>
+        </div>
+        <ng-template #loading>
+          <p class="text-secondary">Loading Qibla direction...</p>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center text-primary mb-5">What Our Users Say</h2>
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <p class="text-secondary">"This app has been a blessing for my daily prayers and Quran recitation."</p>
+          <p class="text-gold">- Ahmed</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <p class="text-secondary">"The prayer times are always accurate, and the Qibla finder is very helpful."</p>
+          <p class="text-gold">- Fatima</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <p class="text-secondary">"I love the clean design and easy-to-use interface."</p>
+          <p class="text-gold">- Yusuf</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-primary text-white text-center py-3">
+    <div class="container">
+      <p>&copy; 2023 Islamic App. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+@if (isShowing) {
+  <div class="start position-fixed top-0 bottom-0 start-0 end-0 w-100 vh-100 d-flex align-items-center justify-content-center bg-light opacity-75">
+    <h2 >هذا الموقع صدقة جارية على روح لامرحومالحاج عبدالوهاب محمد ابراهيم الحصرى والمغفور لها زوجته</h2>
+  </div>
+}

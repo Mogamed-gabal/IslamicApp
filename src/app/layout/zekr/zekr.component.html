@@ -1,0 +1,10 @@
+<div class="container py-4  ">
+    <div class="heading w-100 text-center p-3">
+        <h2 class=" text-primary border-bottom p-2">الاحاديث من صحيح البخارى</h2>
+    </div>
+    @for (Hadith of Azkar; track $index) {
+        <div class="hadith">
+            <p class=" border-bottom ">{{Hadith.arab}}</p>
+        </div>
+    }
+</div>

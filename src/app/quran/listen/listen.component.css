@@ -1,0 +1,23 @@
+/* Quran Listen Styles */
+.quran-listen {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+  }
+  
+  audio {
+    margin-top: 20px;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #1e6f5c;
+  }
+  
+  .btn-primary:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }

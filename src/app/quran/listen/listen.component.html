@@ -1,0 +1,60 @@
+
+
+
+  <div class="quran-listen">
+    <h2 class="text-center text-primary">Listen to Quran</h2>
+    <p class="text-center text-secondary">Select a Surah and Qari to start listening.</p>
+  
+    <!-- Surah Selection Dropdown -->
+    <div class="container text-center">
+      <select class="form-select w-50 mx-auto mb-4" (change)="onSurahSelect($event)">
+        <option value="" disabled selected>Select a Surah</option>
+        @for (surah of surahs; track $index) {<option  [value]="surah.number">{{ surah.englishName }} ({{ surah.name }})</option>} 
+    </select>
+    </div>
+  
+    <!-- Qari Selection Dropdown -->
+    @if (qaris.length>0) {
+        <div  class="container text-center">
+            <select class="form-select w-50 mx-auto mb-4" (change)="onQariSelect($event)">
+              <option value="" disabled selected>Select a Qari</option>
+            @for ( qari of qaris; track $index) {
+                <option  [value]="qari.identifier">{{ qari.englishName }}</option>
+            }
+              
+            </select>
+          </div>
+     }
+  
+    <!-- Audio Player -->
+     @if (audioUrl) {
+        <div class="text-center">
+            <audio controls class="w-100" #audioPlayer (timeupdate)="updateProgress()">
+              <source [src]="audioUrl" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <div class="progress mt-2">
+              <div class="progress-bar" role="progressbar" [style.width]="progress + '%'"></div>
+            </div>
+            <div class="mt-2">
+              <button class="btn btn-primary me-2" (click)="togglePlay()">
+                {{ isPlaying ? 'Pause' : 'Play' }}
+              </button>
+            </div>
+          </div>
+     }
+   
+  
+    <!-- Pagination Buttons -->
+    <div class="text-center mt-4">
+      <button class="btn btn-primary me-2" (click)="previousSurah()" [disabled]="currentSurahIndex === 0">Previous Surah</button>
+      <button class="btn btn-primary" (click)="nextSurah()" [disabled]="currentSurahIndex === surahs.length - 1">Next Surah</button>
+    </div>
+  
+    <!-- Loading State -->
+    @if (isLoading) {
+        <div  class="text-center">
+            <p>Loading Surahs...</p>
+          </div>
+     }
+  </div>
